@@ -1,14 +1,22 @@
 {
-  "name": "aurora",
+  "name": "vue-aurora-ui",
+  "author": "Milok Murlyka",
   "version": "0.1.0",
-  "private": true,
+  "main": "./lib/vue-aurora-ui.common.js",
+  "homepage": "https://mmurlyka.github.io/vue-aurora-ui",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "predeploy": "vue-cli-service build --mode demo",
+    "deploy": "gh-pages -d demo",
+    "build": "vue-cli-service build --target lib --name vue-aurora-ui src/lib.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "postcss-nested": "^5.0.5",
+    "postcss-preset-env": "^6.7.0",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
     "vue": "^3.0.4"
   },
   "devDependencies": {
@@ -24,5 +32,10 @@
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MMurlyka/vue-aurora-ui"
   }
 }
